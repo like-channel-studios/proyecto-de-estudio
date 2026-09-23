@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoConsultor CCS - Buscador de Repuestos y Ferreterías</title>
+</head>
+<body>
+
+   
+    </header>
+
+    <!-- SECCIÓN PRINCIPAL DE BÚSQUEDA (HERO) -->
+    <main id="contenido-principal">
+        <section id="seccion-busqueda">
+            <h2 class="titulo-busqueda">¿¿Qué nesesitas buscar en Caracas??</h2>
+            <p class="descripcion-busqueda">
+                Consulta disponibilidad en tiempo real especificaciones técnicas y ubicaciones exactas en ferreterías y ventas de repuestos en el Distrito Capital.
+            </p>
+
+            <!-- FORMULARIO / CAMPO DE BÚSQUEDA PRINCIPAL -->
+            <form id="form-busqueda" role="search" onsubmit="return false;">
+                <div class="campo-busqueda-grupo">
+                    <label for="input-busqueda" class="sr-only">Buscar producto, herramienta o tienda</label>
+                    <input 
+                        type="search" 
+                        id="input-busqueda" 
+                        name="q" 
+                        placeholder="Ej. Aceite 20W50, Batería 1100, Pastillas Aveo, Amortiguador, Filtro Wix, Ferretería EPA..." 
+                        autocomplete="off"
+                        required
+                    >
+                    <button type="submit" id="btn-buscar">Buscar →</button>
+  
+        </section>
+
+        <!-- PANEL DE FILTROS AVANZADOS (Aparece junto con la búsqueda) -->
+        <aside id="panel-filtros" hidden>
+            <h3>Filtrar Resultados</h3>
+
+            <!-- Filtro por Municipio / Zona de Caracas -->
+            <div class="grupo-filtro">
+                <label for="filtro-zona">Zona de Distrito Capital:</label>
+                <select id="filtro-zona">
+                    <option value="todas">Todas las zonas</option>
+                    <option value="catia">Catia / Perez Bonalde</option>
+                    <option value="quinta-crespo">Quinta Crespo / Av. Baralt</option>
+                    <option value="san-martin">San Martín / Vista Alegre</option>
+                    <option value="la-yaguara">La Yaguara / Antímano</option>
+                    <option value="sabana-grande">Sabana Grande / Chacaíto</option>
+                    <option value="los-ruices">Los Ruices / Boleíta</option>
+                    <option value="chacao">Chacao</option>
+                    <option value="san-bernardino">San Bernardino / Quinta Crespo</option>
+                </select>
+            </div>
+            </div>
+
+            <!-- Filtro por Estado de Inventario -->
+            <div class="grupo-filtro">
+                <label>Disponibilidad:</label>
+                <label><input type="checkbox" id="filtro-stock-inmediato"> Solo entrega/retiro inmediato</label>
+            </div>
+        </aside>
+
+        <!-- CONTENEDOR DE RESULTADOS (Inicialmente vacío hasta que el usuario busque) -->
+        <section id="seccion-resultados">
+            <div id="encabezado-resultados" hidden>
+                <h2>Resultados para: "<span id="termino-buscado"></span>"</h2>
+                <span id="cantidad-resultados">0 productos encontrados</span>
+            </div>
+
+            <!-- AQUÍ EL JAVASCRIPT INYECTARÁ LAS TARJETAS DE LOS PRODUCTOS -->
+            <div id="contenedor-productos"></div>
+        </section>
+    </main>
+
+            <div class="producto-detalles">
+                <h3 class="producto-titulo">Nombre del Producto:</h3>
+
+                </div>
+
+              
+            </div>
+        </article>
+    </template>
+
+    <!-- FOOTER / PIE DE PÁGINA -->
+    <footer id="pie-pagina">
+        <p>&copy; 2026 AutoConsultor CCS - Directorio de Ferreterías y Repuestos en Distrito Capital, Venezuela.</p>
+    </footer>
+
+</body>
+</html>
